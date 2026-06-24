@@ -1,0 +1,98 @@
+ 
+ /* -- ATTENZIONE PROPRIETA' PRIVATA DI SFRISO PAOLO -- */
+
+ body {
+            background-color: #46e1ec;
+            /* colore di sfondo (azzurro) */
+            margin: 0;
+            /* rimuove il margine automatico del browser */
+            overflow-x: hidden;
+            /* BLOCCA lo scorrimento orizzontale */
+            overflow-y: hidden;
+            /* nasconde lo scroll verticale */
+            height: 100vh;
+            /* altezza = 100% della finestra visibile */
+            font-family: sans-serif;
+            /* un font più pulito e moderno per i testi */
+        }
+
+        /* Ottimizzazione testi per renderli grandi e centrati su mobile e PC */
+        h1 {
+            font-size: 7vw;
+            /* Il testo si adatta alla larghezza dello schermo dello smartphone */
+            margin: 10px 0;
+            color: #333;
+        }
+
+        h2 {
+            font-size: 5vw;
+            margin: 5px 0;
+            color: #555;
+        }
+
+        /* Stile specifico per la data e l'ora */
+        #data-ora {
+            font-size: 4.5vw;
+            font-weight: bold;
+            margin-top: 15px;
+            color: #2c3e50;
+            background-color: rgba(255, 255, 255, 0.4);
+            /* Un leggero sfondo semitrasparente per leggerlo meglio */
+            padding: 10px 20px;
+            border-radius: 15px;
+            display: inline-block;
+            line-height: 1.4;
+            /* Dona un po' di respiro tra la data e l'ora a capo */
+        }
+
+        @media (min-width: 768px) {
+            h1 {
+                font-size: 40px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            h3 {
+                font-size: 18px;
+            }
+
+            #data-ora {
+                font-size: 20px;
+            }
+        }
+
+        /* . = classe → si applica a tutti i fiori */
+        .fiore {
+            position: absolute;
+            /* posizione libera */
+            width: 65px;
+            /* Proporzione perfetta su mobile */
+            user-select: none;
+            /* non selezionabile */
+        }
+
+        /* # = ID → elemento unico (il gatto) */
+        #gatto-fisso {
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            /* centro orizzontale */
+            transform: translateX(-50%);
+            /* correzione per centratura perfetta */
+            width: 140px;
+            /* Proporzione perfetta per smartphone */
+            z-index: 1000;
+            /* Il gatto è sempre in primo piano rispetto ai fiori */
+        }
+
+        /* Un piccolo tocco estetico: l'erba */
+        #pavimento {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 40px;
+            background-color: #2ecc71;
+            /* Verde prato */
+        }
